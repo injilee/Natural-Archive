@@ -1,0 +1,136 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', 'Patua One', sans-serif, cursive;
+}
+ul, ol, li{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+
+/* nav */
+.nav{
+    display:flex;
+    flex-direction:row;
+    justify-content:right;
+    padding:60px 0;
+}
+.nav .nav-menu{
+    display:flex;
+}
+.nav .nav-menu > li{
+    margin-right:56px;
+}
+.btn, .btn > i{
+    display:none;
+}
+.nav > ul > li > a{
+    font-weight:600;
+    color:rgb(0, 42, 66);
+}
+
+/* main */
+.bg .bg-content .mainbg img{
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100%;
+    object-fit:cover;
+    transition: opacity 400ms 0ms ease-in-out;
+    opacity:0.9;
+}
+.bg .bg-content img{
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100%;
+    object-fit:cover;
+    transition: opacity 400ms 0ms ease-in-out;
+    opacity:0;
+}
+.bg .bg-content .bg-item2 img{
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100%;
+    object-fit:contain;
+    transition: opacity 400ms 0ms ease-in-out;
+    opacity:0;
+}
+
+.content{
+    font-family: 'Patua One', cursive;
+    font-size:65px;
+    padding-left:13vw;
+    line-height:1.444444444444444;
+    /* cursor:pointer; */
+    width:fit-content;
+}
+.content a{
+    color:rgba(255, 245, 109, 0.884);
+}
+
+@media screen and (max-width:768px){
+    .active{
+        transform:rotate(90deg);
+        transition: transform 1s ease-in-out;
+    }
+
+    /* nav */
+    .nav{
+        z-index:10;
+        display:none;
+        align-items:flex-start;
+        position:absolute;
+        top:0;
+        right:0;
+        height:100%;
+        padding:0 40px;
+        background-color: #fff;
+    }
+    .nav .nav-menu{
+        flex-direction:column;
+        text-align:center;
+        padding-top:80px;
+    }
+    .nav .nav-menu > li{
+        padding:15px 25px;
+        margin-right:0;
+    }
+    .nav .nav-menu > li:hover{
+        border-radius:10px;
+        background-color: rgba(255, 245, 109, 0.884);
+    }
+    .btn{
+        z-index:10;
+        display:block;
+        position:absolute;
+        top:40px;
+        right:0;
+        /* a Tag에도 트랜지션 줘야 자연스럽게 toggle 효과 발생*/
+        margin:20px;
+        transition: transform 400ms ease-in-out;
+    }
+    .btn > i{
+        display:block;
+        font-size:18px;
+        color:rgb(0, 42, 66);
+        transition: transform 400ms ease-in-out;
+    }
+
+    /* content */
+    .content{
+        font-size:57px;
+        padding-top:18vh;
+    }
+}
