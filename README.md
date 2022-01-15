@@ -1,2 +1,2 @@
-# Natural-Archive.github.io
+# Natural-Archive
 Digglet Portfolio Project
