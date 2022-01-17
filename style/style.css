@@ -56,17 +56,6 @@ a{
     transition: opacity 400ms 0ms ease-in-out;
     opacity:0;
 }
-.bg .bg-content .bg-item2 img{
-    z-index:-1;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100%;
-    object-fit:contain;
-    transition: opacity 400ms 0ms ease-in-out;
-    opacity:0;
-}
 
 .content{
     font-family: 'Patua One', cursive;
