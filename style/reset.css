@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', 'Patua One', 'Courier Prime', 'Source Serif Pro', sans-serif, cursive, monospace;
+}
+ul, ol, li{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}

@@ -1,23 +1,11 @@
-body{
-    margin:0;
-    padding:0;
-    font-family: 'Roboto', 'Patua One', sans-serif, cursive;
-}
-ul, ol, li{
-    margin: 0;
-    padding: 0;
-    list-style:none;
-}
-a{
-    text-decoration: none;
-}
+@import "reset.css";
 
 /* nav */
 .nav{
     display:flex;
     flex-direction:row;
     justify-content:right;
-    padding:60px 0;
+    padding:62px 0;
 }
 .nav .nav-menu{
     display:flex;
@@ -69,7 +57,7 @@ a{
     color:rgba(255, 245, 109, 0.884);
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:654px){
     .active{
         transform:rotate(90deg);
         transition: transform 1s ease-in-out;
