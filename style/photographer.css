@@ -1,0 +1,147 @@
+@import "reset.css";
+
+
+h1{
+    margin:0;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    padding-top:54px;
+}
+
+/* logo */
+.logo{
+    font-family: 'Patua One', cursive;
+    font-size:30px;
+    font-weight:500;
+    margin-left:76px;
+}
+
+/* nav */
+.nav{
+    display:flex;
+    flex-direction:row;
+    justify-content:right;
+}
+.nav .nav-menu{
+    display:flex;
+    align-items:center;
+}
+.nav .nav-menu > li{
+    line-height:20px;
+    letter-spacing:0.8;
+    margin-right:56px;
+}
+.btn, .btn > i{
+    display:none;
+}
+.nav > ul > li > a{
+    font-weight:600;
+    color:rgb(0, 42, 66);
+}
+
+/* profile */
+.profile{
+    display:flex;
+    justify-content:center;
+    padding-top:100px;
+}
+.profile-wrap{
+    display:flex;
+    flex-direction:column;
+}
+.profile-wrap .profile-img{
+    max-width:650px;
+    width:100%;
+    height:auto;
+    text-align:center;
+    align-items:center;
+    margin:0 auto;
+}
+.profile-wrap .photographer{
+    display:flex;
+    font-size:20px;
+    font-family: 'Courier Prime', monospace;
+    font-weight:400;
+    margin-top:22px;
+}
+.profile-wrap .phone{
+    font-size:20px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight:400;
+    text-align:right;
+    margin-top:14px;
+}
+.profile-wrap .email{
+    font-size:20px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight:400;
+    text-align:right;
+}
+
+@media screen and (max-width:654px){
+    .active{
+        transform:rotate(90deg);
+        transition: transform 1s ease-in-out;
+    }
+
+    /* nav */
+    .nav{
+        z-index:10;
+        display:none;
+        align-items:flex-start;
+        position:absolute;
+        top:0;
+        right:0;
+        height:100%;
+        padding:0 40px;
+        background-color: #fff;
+    }
+    .nav .nav-menu{
+        flex-direction:column;
+        text-align:center;
+        padding-top:80px;
+    }
+    .nav .nav-menu > li{
+        padding:15px 25px;
+        margin-right:0;
+    }
+    .nav .nav-menu > li:hover{
+        border-radius:10px;
+        background-color: rgba(255, 245, 109, 0.884);
+    }
+    .btn{
+        z-index:10;
+        display:block;
+        position:absolute;
+        top:40px;
+        right:0;
+        /* a Tag에도 트랜지션 줘야 자연스럽게 toggle 효과 발생*/
+        margin:20px;
+        transition: transform 400ms ease-in-out;
+    }
+    .btn > i{
+        display:block;
+        font-size:18px;
+        color:rgb(0, 42, 66);
+        transition: transform 400ms ease-in-out;
+    }
+
+    /* profile */
+    .profile-wrap .photographer{
+        font-size:16px;
+        margin-top:14px;
+    }
+    .profile-wrap .phone{
+        font-size:16px;
+        margin-top:14px;
+    }
+    .profile-wrap .email{
+        font-size:16px;
+        font-family: 'Source Serif Pro', serif;
+        font-weight:400;
+        text-align:right;
+    }
+}
