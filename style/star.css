@@ -1,8 +1,4 @@
 @import "reset.css";
-body{
-    margin:0;
-}
-
 h1{
     margin:0;
 }
@@ -46,57 +42,35 @@ header{
     color:rgb(0, 42, 66);
 }
 
-/* profile */
-.profile{
+/* content */
+.content{
     display:flex;
     justify-content:center;
-    padding:100px 0 150px;
+    padding:40px 30px 60px;
 }
-.profile-wrap{
+.content-wrap{
     display:flex;
     flex-direction:column;
 }
-.profile-wrap .profile-img{
-    max-width:650px;
+.content-wrap .category{
+    font-size:20px;
+}
+.content-wrap .content-img{
+    display:block;
     width:100%;
     height:auto;
     text-align:center;
     align-items:center;
-    margin:0 auto;
+    margin:0 auto 40px;
 }
-.profile-wrap .photographer{
-    display:flex;
-    font-size:21px;
-    font-family: 'Courier Prime', monospace;
-    font-weight:500;
-    margin-top:15px;
+.content-wrap .content-item{
+    text-align:center;
 }
-.profile-wrap .phone{
+.content-wrap .content-item .title{
     font-size:20px;
     font-family: 'Source Serif Pro', serif;
     font-weight:400;
-    text-align:right;
-    margin-top:34px;
-}
-.profile-wrap .email{
-    font-size:20px;
-    font-family: 'Source Serif Pro', serif;
-    font-weight:400;
-    text-align:right;
-}
-
-.sns{
-    display:flex;
-    justify-content:flex-end;
-    margin-top:5px;
-    align-items:center;
-}
-.sns i{
-    font-size:28px;
-    color:rgb(0, 42, 66);
-}
-.sns .instagram{
-    margin-right:12px;
+    margin-bottom:100px;
 }
 
 /* footer */
@@ -115,11 +89,19 @@ footer{
     font-size:14px;
     margin:0;
 }
+.footer-copyright .social{
+    display:flex;
+}
+.footer-copyright .social i{
+    font-size:20px;
+    color:#fff;
+}
+.footer-copyright .social .instagram{
+    margin-right:15px;
+}
+
 
 @media screen and (max-width:782px){
-    body{
-        padding:0 14px;
-    }
     .active{
         transform:rotate(90deg);
         transition: transform 1s ease-in-out;
@@ -127,7 +109,6 @@ footer{
 
     .logo{
         font-size:27px;
-        margin-left:0;
     }
     /* nav */
     .nav{
@@ -171,17 +152,25 @@ footer{
         transition: transform 400ms ease-in-out;
     }
 
-    /* profile */
-    .profile-wrap .photographer{
-        font-size:20px;
+    /* content */
+    .content{
+        padding:17px 30px 60px;
     }
-    .profile-wrap .phone{
-        font-size:18px;
+    .content-wrap .content-img{
+        margin:0 auto 23px;
     }
-    .profile-wrap .email{
+    .content-wrap .content-item .title{
+        font-size:17px;
+    }
+
+    /* footer */
+    footer{
+        padding:13px 0;
+    }
+    .footer-copyright p{
+        font-size:12px;
+    }
+    .footer-copyright .social i{
         font-size:18px;
-        font-family: 'Source Serif Pro', serif;
-        font-weight:400;
-        text-align:right;
     }
 }
