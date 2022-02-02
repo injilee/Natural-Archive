@@ -88,7 +88,7 @@ header{
 .sns{
     display:flex;
     justify-content:flex-end;
-    margin-top:5px;
+    margin-top:24px;
     align-items:center;
 }
 .sns i{
@@ -103,7 +103,7 @@ header{
 footer{
     background-color:#000;
     color:#fff;
-    padding:20px 0;
+    padding:40px 0;
 }
 .footer-copyright{
     display:flex;
@@ -117,9 +117,6 @@ footer{
 }
 
 @media screen and (max-width:782px){
-    body{
-        padding:0 14px;
-    }
     .active{
         transform:rotate(90deg);
         transition: transform 1s ease-in-out;
@@ -127,7 +124,6 @@ footer{
 
     .logo{
         font-size:27px;
-        margin-left:0;
     }
     /* nav */
     .nav{
@@ -172,16 +168,22 @@ footer{
     }
 
     /* profile */
+    .profile{
+        padding:100px 30px 150px;
+    }
     .profile-wrap .photographer{
-        font-size:20px;
+        font-size:18px;
     }
     .profile-wrap .phone{
-        font-size:18px;
+        font-size:15px;
     }
     .profile-wrap .email{
-        font-size:18px;
+        font-size:15px;
         font-family: 'Source Serif Pro', serif;
         font-weight:400;
         text-align:right;
+    }
+    .sns i{
+        font-size:26px;
     }
 }
