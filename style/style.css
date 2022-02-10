@@ -44,6 +44,9 @@
     transition: opacity 400ms 0ms ease-in-out;
     opacity:0;
 }
+.bg .bg-item img.active{
+    opacity: 0;
+}
 
 .content{
     font-family: 'Patua One', cursive;
@@ -53,9 +56,13 @@
     /* cursor:pointer; */
     width:fit-content;
 }
-.content a{
+.content .content-items a.active{
+    color:rgb(0, 42, 66);
+}
+.content .content-items a{
     color:rgba(255, 245, 109, 0.884);
 }
+
 
 @media screen and (max-width:782px){
     .active{

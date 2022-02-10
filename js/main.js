@@ -1,10 +1,5 @@
 'use strict';
 
-const textList1 = document.querySelector(".list1");
-const textList2 = document.querySelector(".list2");
-const textList3 = document.querySelector(".list3");
-const textList4 = document.querySelector(".list4");
-
 const mainBg = document.querySelector(".mainbg img");
 
 const bg1 = document.querySelector(".bg-item1 img");
@@ -17,69 +12,48 @@ const BLOCK = "0.9";
 const WHITE = "rgba(230, 230, 230, 0.86)";
 const BLACK = "rgb(0, 42, 66)";
 
-function onMouseOver1(event){
-    bg1.style.opacity = BLOCK;
-    mainBg.style.opacity = NONE;
-    event.target.style.color = WHITE;
-}
+const ul = document.querySelector(".content-items");
+const li = document.querySelector(".content-items li");
+const anchor = document.querySelectorAll(".content-items a");
+const bg = document.querySelector(".bg-content");
 
-function onMouseLeave1(event){
-    bg1.style.opacity = NONE;
-    mainBg.style.opacity = BLOCK;
-    event.target.style.color = BLACK;
-}
-textList1.addEventListener("mouseenter", onMouseOver1);
-textList1.addEventListener("mouseleave", onMouseLeave1);
+ul.addEventListener('mouseenter', event =>{
+    // 1. li selector
+    if(event.target.tagName == 'LI'){
+        event.target.classList.add('active');
+    };
 
+    // 2. 'a' add & remove classList
+    anchor.forEach((e)=>{
+        e.addEventListener('mouseenter', ()=>e.classList.add('active'))
+    });
+    
+    
+}, true);
 
-function onMouseOver2(event){
-    bg2.style.opacity = BLOCK;
-    mainBg.style.opacity = NONE;
-    event.target.style.color = WHITE;
-}
+ul.addEventListener('mouseleave', event =>{
+    // 1. li selector
+    if(event.target.tagName == 'LI'){
+        event.target.classList.remove('active');
+    };
 
-function onMouseLeave2(event){
-    bg2.style.opacity = NONE;
-    mainBg.style.opacity = BLOCK;
-    event.target.style.color = BLACK;
-}
-textList2.addEventListener("mouseenter", onMouseOver2);
-textList2.addEventListener("mouseleave", onMouseLeave2);
-
-function onMouseOver3(event){
-    bg3.style.opacity = BLOCK;
-    mainBg.style.opacity = NONE;
-    event.target.style.color = WHITE;
-}
-
-function onMouseLeave3(event){
-    bg3.style.opacity = NONE;
-    mainBg.style.opacity = BLOCK;
-    event.target.style.color = BLACK;
-}
-textList3.addEventListener("mouseenter", onMouseOver3);
-textList3.addEventListener("mouseleave", onMouseLeave3);
-
-function onMouseOver4(event){
-    bg4.style.opacity = BLOCK;
-    mainBg.style.opacity = NONE;
-    event.target.style.color = WHITE;
-}
-
-function onMouseLeave4(event){
-    bg4.style.opacity = NONE;
-    mainBg.style.opacity = BLOCK;
-    event.target.style.color = BLACK;
-}
-textList4.addEventListener("mouseenter", onMouseOver4);
-textList4.addEventListener("mouseleave", onMouseLeave4);
+    // 2. 'a' add & remove classList
+    anchor.forEach((e)=>{
+        e.addEventListener('mouseleave', ()=>e.classList.remove('active'))
+    });
+}, true);
 
 
+// function onMouseOver4(event){
+//     bg4.style.opacity = BLOCK;
+//     mainBg.style.opacity = NONE;
+//     event.target.style.color = WHITE;
+// }
 
-// hoverList.addEventListener("mouseover", function(){
-//     for(let i=0;i<10;i++){
-//             bg.classList.remove("bg");
-//             document.querySelector(".poster-list > img").style.opacity = "1";
-//         }
-//     console.log("hi");
-// });
+// function onMouseLeave4(event){
+//     bg4.style.opacity = NONE;
+//     mainBg.style.opacity = BLOCK;
+//     event.target.style.color = BLACK;
+// }
+// textList4.addEventListener("mouseenter", onMouseOver4);
+// textList4.addEventListener("mouseleave", onMouseLeave4);
