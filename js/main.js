@@ -15,17 +15,23 @@ const BLACK = "rgb(0, 42, 66)";
 const ul = document.querySelector(".content-items");
 const li = document.querySelector(".content-items li");
 const anchor = document.querySelectorAll(".content-items a");
-const bg = document.querySelector(".bg-content");
+const bg = document.querySelectorAll(".bg-content div");
+
+bg.forEach((e)=>{
+    e.classList.add('active')
+    console.log(e);
+});
 
 ul.addEventListener('mouseenter', event =>{
     // 1. li selector
     if(event.target.tagName == 'LI'){
         event.target.classList.add('active');
     };
-
+    
     // 2. 'a' add & remove classList
     anchor.forEach((e)=>{
         e.addEventListener('mouseenter', ()=>e.classList.add('active'))
+        console.log(e.dataset.id);
     });
     
     
