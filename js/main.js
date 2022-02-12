@@ -2,6 +2,9 @@
 
 const mainBg = document.querySelector(".mainbg img");
 
+const NONE = "0";
+const BLOCK = "0.9";
+
 const ul = document.querySelector(".content-items");
 const li = document.querySelector(".content-items li");
 const anchor = document.querySelectorAll(".content-items a");
