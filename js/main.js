@@ -2,11 +2,6 @@
 
 const mainBg = document.querySelector(".mainbg img");
 
-const bg1 = document.querySelector(".bg-item1 img");
-const bg2 = document.querySelector(".bg-item2 img");
-const bg3 = document.querySelector(".bg-item3 img");
-const bg4 = document.querySelector(".bg-item4 img");
-
 const NONE = "0";
 const BLOCK = "0.9";
 const WHITE = "rgba(230, 230, 230, 0.86)";
@@ -17,36 +12,40 @@ const li = document.querySelector(".content-items li");
 const anchor = document.querySelectorAll(".content-items a");
 const bg = document.querySelectorAll(".bg-content div");
 
-bg.forEach((e)=>{
-    e.classList.add('active')
-    console.log(e);
-});
 
 ul.addEventListener('mouseenter', event =>{
     // 1. li selector
     if(event.target.tagName == 'LI'){
-        event.target.classList.add('active');
+        mainBg.style.opacity = NONE;
+        // console.log(event.target.firstElementChild);
+        event.target.firstElementChild.classList.add('active');
+
+        const idOne = event.target.firstElementChild.dataset.id;
+        bg.forEach((e)=>{
+            const idTwo = e.dataset.id;
+            if(idOne == idTwo){
+                    e.firstElementChild.classList.add('active');
+                    // console.log(e.firstElementChild)
+                }
+            });
     };
-    
-    // 2. 'a' add & remove classList
-    anchor.forEach((e)=>{
-        e.addEventListener('mouseenter', ()=>e.classList.add('active'))
-        console.log(e.dataset.id);
-    });
-    
-    
 }, true);
 
 ul.addEventListener('mouseleave', event =>{
     // 1. li selector
     if(event.target.tagName == 'LI'){
-        event.target.classList.remove('active');
-    };
+        mainBg.style.opacity = BLOCK;
+        event.target.firstElementChild.classList.remove('active');
 
-    // 2. 'a' add & remove classList
-    anchor.forEach((e)=>{
-        e.addEventListener('mouseleave', ()=>e.classList.remove('active'))
-    });
+        const idOne = event.target.firstElementChild.dataset.id;
+        bg.forEach((e)=>{
+            const idTwo = e.dataset.id;
+            if(idOne == idTwo){
+                e.firstElementChild.classList.remove('active');
+                // console.log(e.firstElementChild)
+                }
+            });
+    };
 }, true);
 
 

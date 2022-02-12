@@ -22,10 +22,6 @@
 }
 
 /* main */
-.bg .bg-content[data-id].active{
-    z-index:10;
-    opacity:1;
-}
 .bg .bg-content .mainbg img{
     z-index:-1;
     position:absolute;
@@ -48,8 +44,8 @@
     transition: opacity 400ms 0ms ease-in-out;
     opacity:0;
 }
-.bg .bg-item img.active{
-    opacity: 0;
+.bg .bg-content .bg-item img.active{
+    opacity:1;
 }
 
 .content{
@@ -69,9 +65,9 @@
 
 
 @media screen and (max-width:782px){
-    .active{
+    .btn.active{
         transform:rotate(90deg);
-        transition: transform 1s ease-in-out;
+        transition: transform 300ms ease-in-out;
     }
 
     /* nav */
