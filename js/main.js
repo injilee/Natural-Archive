@@ -2,11 +2,6 @@
 
 const mainBg = document.querySelector(".mainbg img");
 
-const NONE = "0";
-const BLOCK = "0.9";
-const WHITE = "rgba(230, 230, 230, 0.86)";
-const BLACK = "rgb(0, 42, 66)";
-
 const ul = document.querySelector(".content-items");
 const li = document.querySelector(".content-items li");
 const anchor = document.querySelectorAll(".content-items a");
@@ -47,18 +42,3 @@ ul.addEventListener('mouseleave', event =>{
             });
     };
 }, true);
-
-
-// function onMouseOver4(event){
-//     bg4.style.opacity = BLOCK;
-//     mainBg.style.opacity = NONE;
-//     event.target.style.color = WHITE;
-// }
-
-// function onMouseLeave4(event){
-//     bg4.style.opacity = NONE;
-//     mainBg.style.opacity = BLOCK;
-//     event.target.style.color = BLACK;
-// }
-// textList4.addEventListener("mouseenter", onMouseOver4);
-// textList4.addEventListener("mouseleave", onMouseLeave4);
