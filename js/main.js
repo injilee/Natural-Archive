@@ -15,7 +15,6 @@ ul.addEventListener('mouseenter', event =>{
     // 1. li selector
     if(event.target.tagName == 'LI'){
         mainBg.style.opacity = NONE;
-        // console.log(event.target.firstElementChild);
         event.target.firstElementChild.classList.add('active');
 
         const idOne = event.target.firstElementChild.dataset.id;
@@ -23,7 +22,6 @@ ul.addEventListener('mouseenter', event =>{
             const idTwo = e.dataset.id;
             if(idOne == idTwo){
                     e.firstElementChild.classList.add('active');
-                    // console.log(e.firstElementChild)
                 }
             });
     };
@@ -40,8 +38,22 @@ ul.addEventListener('mouseleave', event =>{
             const idTwo = e.dataset.id;
             if(idOne == idTwo){
                 e.firstElementChild.classList.remove('active');
-                // console.log(e.firstElementChild)
                 }
             });
     };
 }, true);
+
+// mobile
+const windowWidth = window.matchMedia("screen and (max-width:782px)");
+
+if(windowWidth.matches){
+    const bgArr = Array.from(bg);
+    let index = 0;
+    setInterval(()=>{
+        // bgArr[index++].classList.add('.active');
+
+        if(index == bgArr.length){
+            index = 0
+        }
+    }, 1000)
+}

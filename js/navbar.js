@@ -1,7 +1,8 @@
 'use strict';
 
 const btn = document.querySelector(".btn");
-let navBarDrop = document.querySelector("nav");
+const btnIcon = document.querySelector(".btn i");
+let navBarDrop = document.querySelector(".nav");
 
 btn.addEventListener("click", (event)=>{
     event.currentTarget.classList.toggle("active");
@@ -12,8 +13,12 @@ btn.addEventListener("click", (event)=>{
 function displayHandle(){
     if(navBarDrop.style.display == "flex"){
         navBarDrop.style.display = "none";
+        navBarDrop.classList.remove('active');
+        btnIcon.style.color = "#000";
     } else {
         navBarDrop.style.display = "flex";
+        navBarDrop.classList.add('active');
+        btnIcon.style.color = "#fff";
     }
 }
 
