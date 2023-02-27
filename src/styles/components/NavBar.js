@@ -42,7 +42,7 @@ export const SlideMenu = styled.ul`
    left: 0;
    display: block;
    width: 100%;
-   padding: 50px 35px;
+   padding: 30px 35px;
    margin: 0 auto;
    background-color: white;
    z-index: 10;
