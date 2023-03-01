@@ -8,25 +8,38 @@ const NavBar = () => {
    const openSlide = () => {
       setOpen(!open);
    };
+
+   const closeSlide = () => {
+      if (open === true) {
+         setOpen(false);
+      } else {
+         return;
+      }
+   };
+
    return (
       <Header>
          <Nav>
             <Link to="/">
-               <h1>Natural Archive</h1>
+               <h1 onClick={closeSlide}>
+                  <img src="logo.png" alt="Natural Archive" />
+               </h1>
             </Link>
-            <span onClick={openSlide}>menu</span>
-            <SlideMenu open={open}>
+            <span onClick={openSlide}>{open ? 'close' : 'menu'}</span>
+         </Nav>
+         <SlideMenu open={open}>
+            <ul>
                <Link to="/photographer">
-                  <li>Photographer</li>
+                  <li onClick={openSlide}>Photographer</li>
                </Link>
                <Link to="/categories">
-                  <li>Categories</li>
+                  <li onClick={openSlide}>Categories</li>
                </Link>
                <Link to="/photos">
-                  <li>Photos</li>
+                  <li onClick={openSlide}>Photos</li>
                </Link>
-            </SlideMenu>
-         </Nav>
+            </ul>
+         </SlideMenu>
       </Header>
    );
 };
