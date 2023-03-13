@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CategorieList = styled.section`
    width: 100%;
    background-color: white;
-   padding: 180px 0;
+   padding: 160px 0;
 
    ul {
       width: 90%;
@@ -13,9 +13,13 @@ export const CategorieList = styled.section`
 
    li {
       font-style: italic;
-      padding-bottom: 12px;
-      &:hover {
-         color: orange;
+      padding-bottom: 18px;
+
+      a {
+         color: black;
+         &:hover {
+            color: orange;
+         }
       }
    }
 `;

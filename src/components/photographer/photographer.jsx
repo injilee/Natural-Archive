@@ -1,12 +1,12 @@
 import React from 'react';
-import { Artist, Contact, Profile, ProfileWrap, SocialChannel } from '../styles/components/Photographer';
+import { Artist, Contact, Profile, ProfileWrap, SocialChannel } from '../../styles/components/Photographer';
 import { FaTwitterSquare, FaFacebookSquare } from 'react-icons/fa';
 
 const Photographer = props => {
    return (
       <ProfileWrap>
          <Profile>
-            <img src="./images/profile.jpg" alt="profile" />
+            <img src="./images/photo/life/IMG_1019.jpg" alt="profile" />
          </Profile>
          <Artist>
             <strong>Kim Chaung Lim</strong>

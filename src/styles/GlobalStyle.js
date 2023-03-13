@@ -1,13 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: '행복고흥L';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/행복고흥L.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   padding: 0;
   margin: 0;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileWrap = styled.section`
+   padding: 25px 0;
    height: auto;
 `;
 

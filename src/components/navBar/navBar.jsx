@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Header, Nav, SlideMenu } from '../styles/components/NavBar';
+import { Header, Nav, SlideMenu } from '../../styles/components/NavBar';
 
 const NavBar = () => {
    const [open, setOpen] = useState(false);
@@ -22,22 +22,22 @@ const NavBar = () => {
          <Nav>
             <Link to="/">
                <h1 onClick={closeSlide}>
-                  <img src="logo.png" alt="Natural Archive" />
+                  <span>Natural Archive</span>
                </h1>
             </Link>
             <span onClick={openSlide}>{open ? 'close' : 'menu'}</span>
          </Nav>
          <SlideMenu open={open}>
             <ul>
-               <Link to="/photographer">
-                  <li onClick={openSlide}>Photographer</li>
-               </Link>
-               <Link to="/categories">
-                  <li onClick={openSlide}>Categories</li>
-               </Link>
-               <Link to="/photos">
-                  <li onClick={openSlide}>Photos</li>
-               </Link>
+               <li onClick={openSlide}>
+                  <Link to="/photographer">Photographer</Link>
+               </li>
+               <li onClick={openSlide}>
+                  <Link to="/categories">Categories</Link>
+               </li>
+               <li onClick={openSlide}>
+                  <Link to="/photos">Photos</Link>
+               </li>
             </ul>
          </SlideMenu>
       </Header>

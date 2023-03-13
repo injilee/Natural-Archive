@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
    height: 100px;
-   background-color: white;
+   background-color: black;
 `;
 
 export const Nav = styled.nav`
@@ -13,7 +13,7 @@ export const Nav = styled.nav`
    width: 90%;
    height: 100px;
    margin: auto;
-   color: black;
+   color: white;
    z-index: 10;
 
    h1 {
@@ -23,6 +23,16 @@ export const Nav = styled.nav`
       flex-direction: column;
       justify-content: center;
       align-content: center;
+
+      span {
+         color: white;
+         font-size: 30px;
+         font-weight: 500;
+         font-family: 'Ubuntu', sans-serif;
+         &:hover {
+            text-decoration: none;
+         }
+      }
    }
 
    span {
@@ -40,7 +50,7 @@ export const SlideMenu = styled.div`
    display: block;
    width: 100%;
    padding: 30px 0;
-   background-color: white;
+   background-color: black;
    z-index: 10;
    opacity: ${({ open }) => (open ? '1' : '0')};
    visibility: ${({ open }) => (open ? 'visibility' : 'hidden')};
@@ -53,10 +63,13 @@ export const SlideMenu = styled.div`
 
    li {
       width: 100%;
-      color: black;
       font-size: 30px;
       padding: 14px 0;
-      &:hover {
-         text-decoration: underline;
+      
+      a{
+         color: white;
+         &:hover {
+            text-decoration: underline;
       }
+   }
 `;
