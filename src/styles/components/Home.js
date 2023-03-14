@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
-export const CarouselWrap = styled.div`
+export const MainWrap = styled.div`
+   display: flex;
+   justify-content: space-around;
    background-color: black;
-   height: 45%;
+   min-height: 100vh;
+   align-items: center;
 `;
 
-export const Carousel = styled.div`
+export const MainImg = styled.ul`
    position: relative;
-   overflow: hidden;
+   display: flex;
+   flex-direction: column;
 
-   div {
+   li {
       width: 100%;
       margin: 0;
 
@@ -40,12 +44,22 @@ export const Carousel = styled.div`
             }
          }
       }
+   }
+`;
 
+export const SideImage = styled.div`
+   display: flex;
+   align-items: center;
+   width: 40%;
+
+   img {
+      display: none;
+   }
+
+   @media screen and (min-width: 768px) {
       img {
          display: block;
-         width: 100vw;
-         height: auto;
-         margin-top: 7px;
+         width: 100%;
       }
    }
 `;

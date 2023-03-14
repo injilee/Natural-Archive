@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileWrap = styled.section`
-   padding: 25px 0;
+   padding: 120px 0;
    height: auto;
 `;
 
@@ -11,7 +11,6 @@ export const Profile = styled.div`
    margin: 0 auto;
 
    img {
-      widht: auto;
       max-width: 100%;
       max-height: 100%;
    }

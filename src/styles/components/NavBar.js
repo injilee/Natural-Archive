@@ -54,7 +54,7 @@ export const SlideMenu = styled.div`
    z-index: 10;
    opacity: ${({ open }) => (open ? '1' : '0')};
    visibility: ${({ open }) => (open ? 'visibility' : 'hidden')};
-   transition: opacity 0.3s, visibility 0.4s;
+   transition: opacity 0.2s, visibility 0.1s;
    
    ul {
       width: 90%;
@@ -62,11 +62,11 @@ export const SlideMenu = styled.div`
    }
 
    li {
-      width: 100%;
       font-size: 30px;
-      padding: 14px 0;
+      margin: 25px 0;
       
       a{
+         display:block;
          color: white;
          &:hover {
             text-decoration: underline;
