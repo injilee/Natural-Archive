@@ -1,0 +1,150 @@
+{
+   "archivePictures": [
+      {
+         "spaces": [
+            {
+               "key": "1",
+               "imgUrl": "../images/photo/spaces/20191023_204715697.jpg",
+               "alt": "처마"
+            },
+            {
+               "key": "2",
+               "imgUrl": "../images/photo/spaces/20191024_172656.jpg",
+               "alt": "거금대교 밑"
+            },
+            {
+               "key": "3",
+               "imgUrl": "../images/photo/spaces/KakaoTalk_20191122_211501912.jpg",
+               "alt": "폐가"
+            },
+            {
+               "key": "4",
+               "imgUrl": "../images/photo/spaces/20191123_142708.jpg",
+               "alt": "폐교"
+            },
+            {
+               "key": "5",
+               "imgUrl": "../images/photo/spaces/20191024_165053.jpg",
+               "alt": "노란 페인트 벽과 계단"
+            },
+            {
+               "key": "6",
+               "imgUrl": "../images/photo/spaces/KakaoTalk_20191030_210105304_01.jpg",
+               "alt": "창고"
+            }
+         ]
+      },
+      {
+         "landscape": [
+            {
+               "imgUrl": "../images/photo/landscape/IMG_0478.jpg",
+               "alt": "달"
+            },
+            {
+               "imgUrl": "../images/photo/landscape/20200815_211003.jpg",
+               "alt": "별이 빛나는 밤"
+            },
+            {
+               "imgUrl": "../images/photo/landscape/20191117_143502.jpg",
+               "alt": "흐린 날과 창고"
+            },
+            {
+               "imgUrl": "../images/photo/landscape/20200709_094719.jpg",
+               "alt": "안개 낀 숲"
+            },
+            {
+               "imgUrl": "../images/photo/landscape/20151115_093207_HDR.jpg",
+               "alt": "논 풍경"
+            },
+            {
+               "imgUrl": "../images/photo/landscape/20191106_165805.jpg",
+               "alt": "선착장"
+            }
+         ]
+      },
+      {
+         "life": [
+            {
+               "imgUrl": "../images/photo/life/IMG_0884.jpg",
+               "alt": "꽃의 꿀을 먹는 나비"
+            },
+            {
+               "imgUrl": "../images/photo/life/IMG_0695.jpg",
+               "alt": "검은흰점나비"
+            },
+            {
+               "imgUrl": "../images/photo/life/IMG_0226.jpg",
+               "alt": "나뭇잎 개"
+            },
+            {
+               "imgUrl": "../images/photo/life/IMG_0944.jpg",
+               "alt": "버섯"
+            },
+            {
+               "imgUrl": "../images/photo/life/IMG_0389.jpg",
+               "alt": "닭"
+            },
+            {
+               "imgUrl": "../images/photo/life/IMG_1032.jpg",
+               "alt": "돌틈에 숨은 도마뱀"
+            }
+         ]
+      },
+      {
+         "travel": [
+            {
+               "imgUrl": "../images/photo/travel/KakaoTalk_20191105_193848856_01.jpg",
+               "alt": "부둣가의 화물 컨테이너"
+            },
+            {
+               "imgUrl": "../images/photo/travel/20191024_173439.jpg",
+               "alt": "빗물에 반사된 육교 난간"
+            },
+            {
+               "imgUrl": "../images/photo/travel/IMG_0797.jpg",
+               "alt": "바닷가"
+            },
+            {
+               "imgUrl": "../images/photo/travel/org_05d3fa725e58657f_1573889560000.jpg",
+               "alt": "드론으로 찍은 산 풍경"
+            },
+            {
+               "imgUrl": "../images/photo/travel/IMG_0991.jpg",
+               "alt": "시골 논길"
+            },
+            {
+               "imgUrl": "../images/photo/travel/김창림5.jpg",
+               "alt": "나룻배"
+            }
+         ]
+      },
+      {
+         "project": [
+            {
+               "imgUrl": "../images/photo/projects/KakaoTalk_20191116_095621513_03.jpg",
+               "alt": "레드키위 단면"
+            },
+            {
+               "imgUrl": "../images/photo/projects/20191121_195938.jpg",
+               "alt": "빛의 속도"
+            },
+            {
+               "imgUrl": "../images/photo/projects/IMG_0614.jpg",
+               "alt": "나뭇잎 위 이슬"
+            },
+            {
+               "imgUrl": "../images/photo/projects/KakaoTalk_20191030_210105304_02.jpg",
+               "alt": "구리선 단면"
+            },
+            {
+               "imgUrl": "../images/photo/projects/IMG_0766-2.jpg",
+               "alt": "무지개 화분"
+            },
+            {
+               "imgUrl": "../images/photo/projects/IMG_0736.jpg",
+               "alt": "무지개 책"
+            }
+         ]
+      }
+   ]
+}
