@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import {
    Carousel,
@@ -12,25 +12,38 @@ import data from '../../service/data.json';
 
 const Spaces = () => {
    const carousel = createRef();
-
-   let index = 0;
+   const [index, setIndex] = useState(0);
 
    const prevSlider = () => {
       if (index === 0) return;
-      index -= 1;
-      carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
+      setIndex(index - 1);
    };
 
    const nextSlider = () => {
       if (index === 5) return;
-      index += 1;
-      carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
+      setIndex(index + 1);
    };
+
+   useEffect(() => {
+      carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
+
+      window.addEventListener('resize', () => {
+         const carousel = document.getElementById('carousel');
+         if (window.innerWidth <= 768) {
+            setIndex(0);
+            carousel.style.transform = `translate3d(0, 0, 0)`;
+         }
+         return;
+      });
+   }, [carousel, index]);
 
    return (
       <>
          <CarouselWrap>
-            <Carousel ref={carousel}>
+            <CarouselTitle>
+               <h2>Spaces</h2>
+            </CarouselTitle>
+            <Carousel ref={carousel} id="carousel">
                {data.archivePictures[0].spaces.map(spaces => (
                   <CarouselItem key={spaces.key}>
                      <div>
@@ -46,9 +59,6 @@ const Spaces = () => {
                <GrNext />
             </NextBtn>
          </CarouselWrap>
-         <CarouselTitle>
-            <h2>Spaces</h2>
-         </CarouselTitle>
       </>
    );
 };

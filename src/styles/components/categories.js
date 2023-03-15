@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const CategorieList = styled.section`
+   display: flex;
+   align-items: center;
    width: 100%;
    height: 100vh;
    background-color: white;
-   padding: 160px 0;
 
    ul {
       width: 90%;

@@ -1,30 +1,65 @@
-import React from 'react';
-import { Carousel, CarouselWrap } from '../../../styles/components/Carousel';
+import React, { createRef, useEffect, useState } from 'react';
+import { GrNext, GrPrevious } from 'react-icons/gr';
+import {
+   Carousel,
+   CarouselItem,
+   CarouselTitle,
+   CarouselWrap,
+   NextBtn,
+   PrevBtn,
+} from '../../../styles/components/Carousel';
+import data from '../../service/data.json';
 
 const Landscape = props => {
+   const carousel = createRef();
+   const [index, setIndex] = useState(0);
+
+   const prevSlider = () => {
+      if (index === 0) return;
+      setIndex(index - 1);
+   };
+
+   const nextSlider = () => {
+      if (index === 5) return;
+      setIndex(index + 1);
+   };
+
+   useEffect(() => {
+      carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
+
+      window.addEventListener('resize', () => {
+         const carousel = document.getElementById('carousel');
+         if (window.innerWidth <= 768) {
+            setIndex(0);
+            carousel.style.transform = `translate3d(0, 0, 0)`;
+         }
+         return;
+      });
+   }, [carousel, index]);
+
    return (
-      <CarouselWrap>
-         <Carousel>
-            <div>
-               <img src="../images/photo/landscape/IMG_0478.jpg" alt="달" />
-            </div>
-            <div>
-               <img src="../images/photo/landscape/20200815_211003.jpg" alt="별이 빛나는 밤" />
-            </div>
-            <div>
-               <img src="../images/photo/landscape/20191117_143502.jpg" alt="흐린 날과 창고" />
-            </div>
-            <div>
-               <img src="../images/photo/landscape/20200709_094719.jpg" alt="안개 낀 숲" />
-            </div>
-            <div>
-               <img src="../images/photo/landscape/20151115_093207_HDR.jpg" alt="논 풍경" />
-            </div>
-            <div>
-               <img src="../images/photo/landscape/20191106_165805.jpg" alt="선착장" />
-            </div>
-         </Carousel>
-      </CarouselWrap>
+      <>
+         <CarouselWrap>
+            <CarouselTitle>
+               <h2>Landscape</h2>
+            </CarouselTitle>
+            <Carousel ref={carousel} id="carousel">
+               {data.archivePictures[1].landscape.map(landscape => (
+                  <CarouselItem key={landscape.key}>
+                     <div>
+                        <img src={landscape.imgUrl} alt={landscape.alt} />
+                     </div>
+                  </CarouselItem>
+               ))}
+            </Carousel>
+            <PrevBtn type="button" className="prev" onClick={prevSlider}>
+               <GrPrevious />
+            </PrevBtn>
+            <NextBtn type="button" className="next" onClick={nextSlider}>
+               <GrNext />
+            </NextBtn>
+         </CarouselWrap>
+      </>
    );
 };
 

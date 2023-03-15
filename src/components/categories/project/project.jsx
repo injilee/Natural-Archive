@@ -1,30 +1,65 @@
-import React from 'react';
-import { Carousel, CarouselWrap } from '../../../styles/components/Carousel';
+import React, { createRef, useEffect, useState } from 'react';
+import { GrNext, GrPrevious } from 'react-icons/gr';
+import {
+   Carousel,
+   CarouselItem,
+   CarouselTitle,
+   CarouselWrap,
+   NextBtn,
+   PrevBtn,
+} from '../../../styles/components/Carousel';
+import data from '../../service/data.json';
 
-const Project = props => {
+const Project = () => {
+   const carousel = createRef();
+   const [index, setIndex] = useState(0);
+
+   const prevSlider = () => {
+      if (index === 0) return;
+      setIndex(index - 1);
+   };
+
+   const nextSlider = () => {
+      if (index === 5) return;
+      setIndex(index + 1);
+   };
+
+   useEffect(() => {
+      carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
+
+      window.addEventListener('resize', () => {
+         const carousel = document.getElementById('carousel');
+         if (window.innerWidth <= 768) {
+            setIndex(0);
+            carousel.style.transform = `translate3d(0, 0, 0)`;
+         }
+         return;
+      });
+   }, [carousel, index]);
+
    return (
-      <CarouselWrap>
-         <Carousel>
-            <div>
-               <img src="../images/photo/projects/KakaoTalk_20191116_095621513_03.jpg" alt="레드키위 단면" />
-            </div>
-            <div>
-               <img src="../images/photo/projects/20191121_195938.jpg" alt="빛의 속도" />
-            </div>
-            <div>
-               <img src="../images/photo/projects/IMG_0614.jpg" alt="나뭇잎 위 이슬" />
-            </div>
-            <div>
-               <img src="../images/photo/projects/KakaoTalk_20191030_210105304_02.jpg" alt="구리선 단면" />
-            </div>
-            <div>
-               <img src="../images/photo/projects/IMG_0766-2.jpg" alt="무지개 화분" />
-            </div>
-            <div>
-               <img src="../images/photo/projects/IMG_0736.jpg" alt="무지개 책" />
-            </div>
-         </Carousel>
-      </CarouselWrap>
+      <>
+         <CarouselWrap>
+            <CarouselTitle>
+               <h2>Personal Projects</h2>
+            </CarouselTitle>
+            <Carousel ref={carousel} id="carousel">
+               {data.archivePictures[4].project.map(project => (
+                  <CarouselItem key={project.key}>
+                     <div>
+                        <img src={project.imgUrl} alt={project.alt} />
+                     </div>
+                  </CarouselItem>
+               ))}
+            </Carousel>
+            <PrevBtn type="button" className="prev" onClick={prevSlider}>
+               <GrPrevious />
+            </PrevBtn>
+            <NextBtn type="button" className="next" onClick={nextSlider}>
+               <GrNext />
+            </NextBtn>
+         </CarouselWrap>
+      </>
    );
 };
 

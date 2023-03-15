@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContent = styled.footer`
    background-color: black;
-   padding: 40px 0;
+   padding: 20px 0;
 
    p {
       font-size: 15px;

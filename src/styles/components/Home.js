@@ -60,6 +60,8 @@ export const SideImage = styled.div`
       img {
          display: block;
          width: 100%;
+         height: 590px;
+         object-fit: contain;
       }
    }
 `;

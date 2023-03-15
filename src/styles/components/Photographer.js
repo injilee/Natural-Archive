@@ -24,32 +24,22 @@ export const Artist = styled.section`
    margin: 22px auto;
 
    strong {
-      font-size: 22px;
-      font-family: 'Cutive Mono', monospace;
+      font-size: 45px;
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 25px;
    }
 `;
 
 export const Contact = styled.div`
    display: flex;
    flex-direction: column;
-   align-items: flex-end;
 
    span {
-      font-size: 18px;
-      font-family: 'Cutive Mono', monospace;
-   }
-`;
-
-export const SocialChannel = styled.div`
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-
-   button {
-      margin-top: 9px;
       font-size: 25px;
-      &:first-child {
-         margin-right: 5px;
-      }
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      // font-style: italic;
    }
 `;

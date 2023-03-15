@@ -1,6 +1,5 @@
 import React from 'react';
-import { Artist, Contact, Profile, ProfileWrap, SocialChannel } from '../../styles/components/Photographer';
-import { FaTwitterSquare, FaFacebookSquare } from 'react-icons/fa';
+import { Artist, Contact, Profile, ProfileWrap } from '../../styles/components/Photographer';
 
 const Photographer = props => {
    return (
@@ -13,14 +12,6 @@ const Photographer = props => {
             <Contact>
                <span>Tel. 010 - 7582 - 5396</span>
                <span>Email. chaung97@naver.com </span>
-               <SocialChannel>
-                  <button>
-                     <FaTwitterSquare></FaTwitterSquare>
-                  </button>
-                  <button>
-                     <FaFacebookSquare></FaFacebookSquare>
-                  </button>
-               </SocialChannel>
             </Contact>
          </Artist>
       </ProfileWrap>

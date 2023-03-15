@@ -17,15 +17,26 @@ export const Carousel = styled.div`
    transform:translate3d(0, 0, 0);
    transition:transform 0.3s ease-out;
    
+   div{
+      
+      img {
+            width:100%;
+         }
+      }
+   }
+
    @media screen and (min-width:768px){
-      width:700px;
       display:flex;
+      width:700px;
+      height: 600px;
       
       div{
          margin:0 20px;
          
          img {
                width:700px;
+               height: 600px;
+               object-fit: contain;
             }
          }
       }
@@ -34,25 +45,22 @@ export const Carousel = styled.div`
 
 export const CarouselItem = styled.div`
    margin: 0;
+   width: 100%;
 
    img {
       display: block;
       width: 100vw;
-      height: auto;
       margin-top: 7px;
-   }
-
-   @media screen and (min-width: 768px) {
-      width: 100%;
    }
 `;
 
 export const PrevBtn = styled.button`
    display: none;
+
    @media screen and (min-width: 768px) {
       position: absolute;
       display: block;
-      top: 180px;
+      top: 340px;
       left: 30px;
       width: 30px;
       height: 60px;
@@ -67,10 +75,11 @@ export const PrevBtn = styled.button`
 
 export const NextBtn = styled.button`
    display: none;
+
    @media screen and (min-width: 768px) {
       position: absolute;
       display: block;
-      top: 180px;
+      top: 340px;
       right: 30px;
       width: 30px;
       height: 60px;
@@ -90,5 +99,7 @@ export const CarouselTitle = styled.section`
       font-family: 'Playfair Display', serif;
       font-size: 48px;
       font-weight: 400;
+      padding: 50px 0;
+      text-align: center;
    }
 `;
