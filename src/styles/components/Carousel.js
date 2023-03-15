@@ -11,6 +11,18 @@ export const CarouselWrap = styled.div`
    }
 `;
 
+export const CarouselTitle = styled.section`
+   h2 {
+      color: white;
+      background-color: black;
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 400;
+      padding: 50px 0;
+      text-align: center;
+   }
+`;
+
 export const Carousel = styled.div`
    position: relative;
    margin: 0 auto;
@@ -60,7 +72,7 @@ export const PrevBtn = styled.button`
    @media screen and (min-width: 768px) {
       position: absolute;
       display: block;
-      top: 340px;
+      top: 50%;
       left: 30px;
       width: 30px;
       height: 60px;
@@ -79,7 +91,7 @@ export const NextBtn = styled.button`
    @media screen and (min-width: 768px) {
       position: absolute;
       display: block;
-      top: 340px;
+      top: 50%;
       right: 30px;
       width: 30px;
       height: 60px;
@@ -89,17 +101,5 @@ export const NextBtn = styled.button`
       border-radius: 15px;
       background-color: white;
       z-index: 10;
-   }
-`;
-
-export const CarouselTitle = styled.section`
-   h2 {
-      color: white;
-      background-color: black;
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      font-weight: 400;
-      padding: 50px 0;
-      text-align: center;
    }
 `;

@@ -9,6 +9,7 @@ import {
    PrevBtn,
 } from '../../../styles/components/Carousel';
 import data from '../../service/data.json';
+import TopBtn from '../../topBtn/topBtn';
 
 const Life = props => {
    const carousel = createRef();
@@ -59,6 +60,7 @@ const Life = props => {
                <GrNext />
             </NextBtn>
          </CarouselWrap>
+         <TopBtn />
       </>
    );
 };
