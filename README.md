@@ -48,15 +48,6 @@ https://natural-archive.netlify.app
 
 이미지 슬라이더 형식의 캐러셀 기능으로, 다음 버튼을 클릭하다가 마지막 이미지 위치에 도달하면 이전 버튼을 이용해 돌아갈 수 있도록 하였다.
 
-<!-- carousel
-https://velog.io/@97godo/React-Hooks%EB%A1%9C-Carousel-%EB%A7%8C%EB%93%A4%EA%B8%B0
-
-window resize
-https://db2dev.tistory.com/entry/React-resize-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%8B%A4%EB%A3%A8%EA%B8%B0
-
-top button
-https://velog.io/@jahommer/React-Top%EB%B2%84%ED%8A%BC-scroll-to-top%EB%A7%8C%EB%93%A4%EA%B8%B0 -->
-
 #### 1) 데이터
 
 <code>data.json</code> 에서 <code>map</code>을 이용해 데이터를 받아왔다.
