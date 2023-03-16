@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TopButton } from '../../styles/components/TopButton';
+import smoothscroll from 'smoothscroll-polyfill';
 
 const TopBtn = () => {
    const [showBtn, setShowBtn] = useState(false);
@@ -15,6 +16,7 @@ const TopBtn = () => {
       const handleShowBtn = () => {
          if (window.scrollY > 500) {
             setShowBtn(true);
+            smoothscroll.polyfill();
          } else {
             setShowBtn(false);
          }
