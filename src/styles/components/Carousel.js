@@ -72,7 +72,7 @@ export const PrevBtn = styled.button`
    @media screen and (min-width: 768px) {
       position: absolute;
       display: block;
-      top: 50%;
+      top: 450px;
       left: 30px;
       width: 30px;
       height: 60px;
@@ -91,7 +91,7 @@ export const NextBtn = styled.button`
    @media screen and (min-width: 768px) {
       position: absolute;
       display: block;
-      top: 50%;
+      top: 450px;
       right: 30px;
       width: 30px;
       height: 60px;

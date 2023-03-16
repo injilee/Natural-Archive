@@ -27,15 +27,17 @@ const Life = props => {
 
    useEffect(() => {
       carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
-
-      window.addEventListener('resize', () => {
-         const carousel = document.getElementById('carousel');
+      const handleCarouselLocate = () => {
          if (window.innerWidth <= 768) {
             setIndex(0);
-            carousel.style.transform = `translate3d(0, 0, 0)`;
+            carousel.current.style.transform = `translate3d(0, 0, 0)`;
          }
-         return;
-      });
+      };
+
+      window.addEventListener('resize', handleCarouselLocate);
+      return () => {
+         window.removeEventListener('resize', handleCarouselLocate);
+      };
    }, [carousel, index]);
 
    return (
@@ -44,7 +46,7 @@ const Life = props => {
             <CarouselTitle>
                <h2>Life</h2>
             </CarouselTitle>
-            <Carousel ref={carousel} id="carousel">
+            <Carousel ref={carousel}>
                {data.archivePictures[2].life.map(life => (
                   <CarouselItem key={life.key}>
                      <div>

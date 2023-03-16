@@ -42,12 +42,16 @@ const Home = () => {
                </Link>
             </li>
             <li>
-               <Link to="travel" onMouseOver={() => onHandler('forest')} onMouseOut={() => onOutHandler()}>
+               <Link to="/categories/travel" onMouseOver={() => onHandler('forest')} onMouseOut={() => onOutHandler()}>
                   Travel
                </Link>
             </li>
             <li>
-               <Link to="projects" onMouseOver={() => onHandler('waterPlant')} onMouseOut={() => onOutHandler()}>
+               <Link
+                  to="/categories/projects"
+                  onMouseOver={() => onHandler('waterPlant')}
+                  onMouseOut={() => onOutHandler()}
+               >
                   Projects
                </Link>
             </li>
