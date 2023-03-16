@@ -88,7 +88,7 @@ translate3d(-${740 * index}px, 0,0)
 const carousel = createRef();
 const [index, setIndex] = useState(0);
 
-// 0(처음)에서 이전 버튼을 클릭하면 5(마지막) 위치로 이동하는 것이 아니라 다음 버튼을 클릭해 1 위치로 이동하는 캐러셀
+// 0(처음)에서 이전 버튼을 클릭하면 5(마지막) 위치로 이동하는 것이 아니라 다음 버튼을 클릭해 1 위치로 이동
 const prevSlider = () => {
    if (index === 0) return;
    setIndex(index - 1);
@@ -105,15 +105,17 @@ const nextSlider = () => {
 ```javascript
 useEffect(() => {
    carousel.current.style.transform = `translate3d(-${740 * index}px, 0,0)`;
-
-   window.addEventListener('resize', () => {
-      const carousel = document.getElementById('carousel');
+   const handleCarouselLocate = () => {
       if (window.innerWidth <= 768) {
          setIndex(0);
-         carousel.style.transform = `translate3d(0, 0, 0)`;
+         carousel.current.style.transform = `translate3d(0, 0, 0)`;
       }
-      return;
-   });
+   };
+
+   window.addEventListener('resize', handleCarouselLocate);
+   return () => {
+      window.removeEventListener('resize', handleCarouselLocate);
+   };
 }, [carousel, index]);
 ```
 
@@ -121,18 +123,18 @@ useEffect(() => {
 
 Desktop 🖥
 
--  login page
-   <br/><img src="" alt="" style="width:100%;"/>
+-  Main page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225532762-be7a1ed0-a91d-4858-8730-7d0c5793f778.png" alt="desktop main page" style="width:100%;"/>
 
--  maker page
-   <br/><img src="" alt="" style="width:100%;"/>
+-  Categories page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225533861-a95ed01f-281a-4daf-ae3f-8f12e70d633d.png" alt="desktop categories page" style="width:100%;"/>
 
 <br/>
 
 Mobile 📱
 
--  login page
-   <br/><img src="h" alt="" style="width:30%;"/>
+-  Main page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225534268-45f851fe-2653-4e81-995e-a99ad7fa10e7.png" alt="mobile main page" style="width:30%;"/>
 
--  maker page
-   <br/><img src="" alt="" style="width:30%;"/>
+-  Categories page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225534511-8ecb5a37-472f-43ca-9ba3-181a10e4f0c4.png" alt="mobile categories page" style="width:30%;"/>
