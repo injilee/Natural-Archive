@@ -10,7 +10,7 @@ const Photographer = props => {
          <Artist>
             <strong>Kim Chaung Lim</strong>
             <Contact>
-               <span>Tel. 010 - 7582 - 5396</span>
+               <span>Contact</span>
                <span>Email. chaung97@naver.com </span>
             </Contact>
          </Artist>

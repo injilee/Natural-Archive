@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ProfileWrap = styled.section`
    padding: 120px 0;
    height: auto;
+   background-color: black;
 `;
 
 export const Profile = styled.div`
@@ -28,6 +29,7 @@ export const Artist = styled.section`
       font-family: 'Lora', serif;
       font-weight: 600;
       font-style: italic;
+      color: white;
       margin-bottom: 25px;
    }
 `;
@@ -40,6 +42,7 @@ export const Contact = styled.div`
       font-size: 25px;
       font-family: 'Lora', serif;
       font-weight: 500;
-      // font-style: italic;
+      color: white;
+      word-break: break-all;
    }
 `;
