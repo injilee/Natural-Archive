@@ -1,30 +1,45 @@
 # Natural-Archive
 
-지인의 포트폴리오를 제작하기 위해 만든 웹 사이트 입니다.
+포토그래퍼 김창림의 포트폴리오를 제작하기 위해 만든 웹 사이트 입니다.
 
-<strong>개발 기간</strong> 📆<br/>
-v1.0.1 : 2022.01.15 ~ 2022.2.12 <br/>
-v1.0.2 : 2023.02.23 ~ 2023.3.16
+# Link 📸
 
-<br/>
-
-## Demo Link
-
-https://natural-archive.netlify.app
+http://chaunglimkim.shop/
 
 <br/>
 
----
+## 1. 개발 기간 및 사용 기술
 
-## 1. Tech Stack
+<strong>개발 기간</strong> 📆  
+v1.0.1 : 2022.01.15 ~ 2022.2.12  
+v1.0.2 : 2023.02.23 ~ 2023.3.16  
+v1.0.3 : 2023.08.01 ~ 2023.8.0 (도메인 등록 및 검색엔진 최적화)
 
 -  [x] React Hooks
 -  [x] React Router
 -  [x] Styled-components
 
+## 2. Preview
+
+Desktop 🖥
+
+-  Main page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225532762-be7a1ed0-a91d-4858-8730-7d0c5793f778.png" alt="desktop main page" style="width:100%;"/>
+
+-  Categories page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225533861-a95ed01f-281a-4daf-ae3f-8f12e70d633d.png" alt="desktop categories page" style="width:100%;"/>
+
 <br/>
 
-## 2. 기능 구현
+Mobile 📱
+
+-  Main page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225534268-45f851fe-2653-4e81-995e-a99ad7fa10e7.png" alt="mobile main page" style="width:30%;"/>
+
+-  Categories page
+   <br/><img src="https://user-images.githubusercontent.com/90603357/225534511-8ecb5a37-472f-43ca-9ba3-181a10e4f0c4.png" alt="mobile categories page" style="width:30%;"/>
+
+## 3. 기능 구현
 
 ### 1. Hover 시 이미지 변경
 
@@ -48,7 +63,7 @@ https://natural-archive.netlify.app
 
 이미지 슬라이더 형식의 캐러셀 기능으로, 다음 버튼을 클릭하다가 마지막 이미지 위치에 도달하면 이전 버튼을 이용해 돌아갈 수 있도록 하였다.
 
-#### 1) 데이터
+#### 2-1. 데이터
 
 <code>data.json</code> 에서 <code>map</code>을 이용해 데이터를 받아왔다.
 
@@ -64,7 +79,7 @@ https://natural-archive.netlify.app
 </Carousel>
 ```
 
-#### 2) translate3d로 캐러셀 위치 변경
+#### 2-2. translate3d로 캐러셀 위치 변경
 
 이미지의 크기가 740px이고 0~5개의 이미지가 캐러셀 위치에 맞게 오도록 하기 위해 translate3d 속성값으로 <code>740 \* index</code> index를 곱해준다.
 
@@ -109,23 +124,3 @@ useEffect(() => {
    };
 }, [carousel, index]);
 ```
-
-## 3. Preview
-
-Desktop 🖥
-
--  Main page
-   <br/><img src="https://user-images.githubusercontent.com/90603357/225532762-be7a1ed0-a91d-4858-8730-7d0c5793f778.png" alt="desktop main page" style="width:100%;"/>
-
--  Categories page
-   <br/><img src="https://user-images.githubusercontent.com/90603357/225533861-a95ed01f-281a-4daf-ae3f-8f12e70d633d.png" alt="desktop categories page" style="width:100%;"/>
-
-<br/>
-
-Mobile 📱
-
--  Main page
-   <br/><img src="https://user-images.githubusercontent.com/90603357/225534268-45f851fe-2653-4e81-995e-a99ad7fa10e7.png" alt="mobile main page" style="width:30%;"/>
-
--  Categories page
-   <br/><img src="https://user-images.githubusercontent.com/90603357/225534511-8ecb5a37-472f-43ca-9ba3-181a10e4f0c4.png" alt="mobile categories page" style="width:30%;"/>
