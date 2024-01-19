@@ -14,26 +14,26 @@ import Photos from './components/photos/photos';
 import { GlobalStyle } from './styles/GlobalStyle';
 
 const App = () => {
-   return (
-      <>
-         <BrowserRouter>
-            <GlobalStyle />
-            <NavBar />
-            <Routes>
-               <Route path="/" element={<Home />} />
-               <Route path="/photographer" element={<Photographer />} />
-               <Route path="/categories" element={<Categories />} />
-               <Route path="/photos" element={<Photos />} />
-               <Route path="/categories/spaces" element={<Spaces />} />
-               <Route path="/categories/landscape" element={<Landscape />} />
-               <Route path="/categories/life" element={<Life />} />
-               <Route path="/categories/travel" element={<Travel />} />
-               <Route path="/categories/projects" element={<Project />} />
-            </Routes>
-            <Footer />
-         </BrowserRouter>
-      </>
-   );
+  return (
+    <>
+      <BrowserRouter>
+        <GlobalStyle />
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/photographer" element={<Photographer />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/photos" element={<Photos />} />
+          <Route path="/categories/spaces" element={<Spaces />} />
+          <Route path="/categories/landscape" element={<Landscape />} />
+          <Route path="/categories/life" element={<Life />} />
+          <Route path="/categories/travel" element={<Travel />} />
+          <Route path="/categories/projects" element={<Project />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default App;

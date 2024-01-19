@@ -33,4 +33,13 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
+img{
+  -webkit-touch-callout:none;
+  user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -webkit-user-select:none;
+  -webkit-user-drag:none;
+}
 `;
