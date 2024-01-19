@@ -67,10 +67,12 @@ export const SideImage = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    height: 590px;
+
     img {
       display: block;
       width: 100%;
-      height: 590px;
+      height: 100%;
       object-fit: contain;
     }
   }

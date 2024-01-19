@@ -55,7 +55,7 @@ export const SlideMenu = styled.div`
   z-index: 10;
   opacity: ${({ open }) => (open ? '1' : '0')};
   visibility: ${({ open }) => (open ? 'visibility' : 'hidden')};
-  transition: opacity 0.2s, visibility 0.1s;
+  transition: opacity 0.2s, visibility 0.1s ease-in-out;
 
   ul {
     width: 90%;
@@ -69,13 +69,16 @@ export const SlideMenu = styled.div`
     a {
       display: block;
       color: white;
+
       &:hover {
         color: black;
+        transition: color 300ms ease-in-out;
       }
     }
 
     &:hover {
       background-color: lemonchiffon;
+      transition: background-color 300ms ease-in-out;
     }
   }
 `;
