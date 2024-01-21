@@ -3,170 +3,264 @@
     {
       "spaces": [
         {
-          "key": "1",
+          "key": "spaces1",
           "imgUrl": "../images/photo/spaces/space1.jpg",
           "alt": "처마"
         },
         {
-          "key": "2",
+          "key": "spaces2",
           "imgUrl": "../images/photo/spaces/space2.jpg",
           "alt": "거금대교 밑"
         },
         {
-          "key": "3",
+          "key": "spaces3",
           "imgUrl": "../images/photo/spaces/space3.jpg",
           "alt": "폐가"
         },
         {
-          "key": "4",
+          "key": "spaces4",
           "imgUrl": "../images/photo/spaces/space4.jpg",
           "alt": "폐교"
         },
         {
-          "key": "5",
+          "key": "spaces5",
           "imgUrl": "../images/photo/spaces/space5.jpg",
           "alt": "노란 페인트 벽과 계단"
         },
         {
-          "key": "6",
+          "key": "spaces6",
           "imgUrl": "../images/photo/spaces/space6.jpg",
           "alt": "창고"
+        },
+        {
+          "key": "spaces7",
+          "imgUrl": "../images/photo/spaces/space7.jpg",
+          "alt": "벽에 반사된 빛"
+        },
+        {
+          "key": "spaces8",
+          "imgUrl": "../images/photo/spaces/space8.jpg",
+          "alt": "폐가의 거실"
+        },
+        {
+          "key": "spaces9",
+          "imgUrl": "../images/photo/spaces/space9.jpg",
+          "alt": "비어있는 선반들"
         }
       ]
     },
     {
       "landscape": [
         {
-          "key": "1",
+          "key": "landscape1",
           "imgUrl": "../images/photo/landscape/landscape1.jpg",
           "alt": "달"
         },
         {
-          "key": "2",
+          "key": "landscape2",
           "imgUrl": "../images/photo/landscape/landscape2.jpg",
           "alt": "별이 빛나는 밤"
         },
         {
-          "key": "3",
+          "key": "landscape3",
           "imgUrl": "../images/photo/landscape/landscape3.jpg",
           "alt": "흐린 날과 창고"
         },
         {
-          "key": "4",
+          "key": "landscape4",
           "imgUrl": "../images/photo/landscape/landscape4.jpg",
           "alt": "안개 낀 숲"
         },
         {
-          "key": "5",
+          "key": "landscape5",
           "imgUrl": "../images/photo/landscape/landscape5.jpg",
           "alt": "논 풍경"
         },
         {
-          "key": "6",
+          "key": "landscape6",
           "imgUrl": "../images/photo/landscape/landscape6.jpg",
           "alt": "선착장"
+        },
+        {
+          "key": "landscape7",
+          "imgUrl": "../images/photo/landscape/landscape7.jpg",
+          "alt": "놀이터"
+        },
+        {
+          "key": "landscape8",
+          "imgUrl": "../images/photo/landscape/landscape8.jpg",
+          "alt": "푸른 하늘과 바다"
+        },
+        {
+          "key": "landscape9",
+          "imgUrl": "../images/photo/landscape/landscape9.jpg",
+          "alt": "곶감 말리기"
         }
       ]
     },
     {
       "life": [
         {
-          "key": "1",
+          "key": "life1",
           "imgUrl": "../images/photo/life/life1.jpg",
           "alt": "손가락 위의 도마뱀"
         },
         {
-          "key": "2",
+          "key": "life2",
           "imgUrl": "../images/photo/life/life2.jpg",
           "alt": "갯벌 위 게"
         },
         {
-          "key": "3",
+          "key": "life3",
           "imgUrl": "../images/photo/life/life3.jpg",
           "alt": "한곳에 모여있는 달걀들"
         },
         {
-          "key": "4",
+          "key": "life4",
           "imgUrl": "../images/photo/life/life4.jpg",
           "alt": "버섯"
         },
         {
-          "key": "5",
+          "key": "life5",
           "imgUrl": "../images/photo/life/life5.jpg",
           "alt": "서로 붙어있는 새끼 고양이 두마리"
         },
         {
-          "key": "6",
+          "key": "life6",
           "imgUrl": "../images/photo/life/life6.jpg",
           "alt": "선진주 위 새"
+        },
+        {
+          "key": "life7",
+          "imgUrl": "../images/photo/life/life7.jpg",
+          "alt": "수탉 한 마리"
+        },
+        {
+          "key": "life8",
+          "imgUrl": "../images/photo/life/life8.jpg",
+          "alt": "바위 틈에 숨은 도마뱀"
+        },
+        {
+          "key": "life9",
+          "imgUrl": "../images/photo/life/life9.jpg",
+          "alt": "검은하얀점나비"
         }
       ]
     },
     {
       "travel": [
         {
-          "key": "1",
+          "key": "travel1",
           "imgUrl": "../images/photo/travel/travel1.jpg",
           "alt": "부둣가의 화물 컨테이너"
         },
         {
-          "key": "2",
+          "key": "travel2",
           "imgUrl": "../images/photo/travel/travel2.jpg",
           "alt": "빗물에 반사된 육교 난간"
         },
         {
-          "key": "3",
+          "key": "travel3",
           "imgUrl": "../images/photo/travel/travel3.jpg",
           "alt": "바닷가"
         },
         {
-          "key": "4",
+          "key": "travel4",
           "imgUrl": "../images/photo/travel/travel4.jpg",
           "alt": "드론으로 촬영한 산"
         },
         {
-          "key": "5",
+          "key": "travel5",
           "imgUrl": "../images/photo/travel/travel5.jpg",
           "alt": "시골 논길"
         },
         {
-          "key": "6",
+          "key": "travel6",
           "imgUrl": "../images/photo/travel/travel6.jpg",
           "alt": "바닷가의 일몰"
+        },
+        {
+          "key": "travel7",
+          "imgUrl": "../images/photo/travel/travel7.jpg",
+          "alt": "썰물 때의 섬"
+        },
+        {
+          "key": "travel8",
+          "imgUrl": "../images/photo/travel/travel8.jpg",
+          "alt": "시속 60km"
         }
       ]
     },
     {
       "project": [
         {
-          "key": "1",
+          "key": "project1",
           "imgUrl": "../images/photo/projects/project1.jpg",
           "alt": "안개"
         },
         {
-          "key": "2",
+          "key": "project2",
           "imgUrl": "../images/photo/projects/project2.jpg",
           "alt": "빛의 속도"
         },
         {
-          "key": "3",
+          "key": "project3",
           "imgUrl": "../images/photo/projects/project3.jpg",
           "alt": "나뭇잎 위 이슬"
         },
         {
-          "key": "4",
+          "key": "project4",
           "imgUrl": "../images/photo/projects/project4.jpg",
           "alt": "구리선 단면"
         },
         {
-          "key": "5",
+          "key": "project5",
           "imgUrl": "../images/photo/projects/project5.jpg",
           "alt": "일하는 할머니와 연기나는 시골밭"
         },
         {
-          "key": "6",
+          "key": "project6",
           "imgUrl": "../images/photo/projects/project6.jpg",
           "alt": "나룻배"
+        },
+        {
+          "key": "project7",
+          "imgUrl": "../images/photo/projects/project7.jpg",
+          "alt": "그늘 진 계단"
+        }
+      ]
+    },
+    {
+      "main": [
+        {
+          "key": "butterfly",
+          "imgUrl": "../images/butterfly.jpg",
+          "alt": "꽃의 꿀을 먹는 나비"
+        },
+        {
+          "key": "cock",
+          "imgUrl": "../images/cock.jpg",
+          "alt": "수탉 두 마리"
+        },
+        {
+          "key": "country",
+          "imgUrl": "../images/country.jpg",
+          "alt": "시골 논 풍경"
+        },
+        {
+          "key": "forest",
+          "imgUrl": "../images/forest.jpg",
+          "alt": "가을 숲속의 서 있는 여자"
+        },
+        {
+          "key": "postBox",
+          "imgUrl": "../images/postBox.jpg",
+          "alt": "빨간 우체통"
+        },
+        {
+          "key": "waterPlant",
+          "imgUrl": "../images/waterPlant.jpg",
+          "alt": "수중 식물"
         }
       ]
     }
