@@ -36,10 +36,47 @@ export const PhotoList = styled.li`
   grid-row: ${({ id }) => (id === 'postBox' ? '3 / 6' : 'auto')};
   cursor: pointer;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  div {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: ${({ id }) => (id === 'postBox' ? '-95%' : '-70%')};
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+      -webkit-transform: skewX(-25deg);
+      transform: skewX(-25deg);
+    }
+
+    &:hover::before {
+      -webkit-animation: shine 0.75s;
+      animation: shine 0.75s;
+    }
+
+    @keyframes shine {
+      100% {
+        left: 120%;
+      }
+    }
+
+    @-webkit-keyframes shine {
+      100% {
+        left: 120%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   @media screen and (min-width: 768px) {
