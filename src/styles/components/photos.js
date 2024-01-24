@@ -43,7 +43,7 @@ export const PhotoList = styled.li`
     &::before {
       position: absolute;
       top: 0;
-      left: ${({ id }) => (id === 'postBox' ? '-95%' : '-70%')};
+      left: ${({ id }) => (id === 'postBox' ? '-95%' : '-80%')};
       z-index: 2;
       display: block;
       content: '';

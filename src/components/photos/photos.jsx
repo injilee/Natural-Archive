@@ -1,25 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Photograpy, PhotoContent, PhotoList } from '../../styles/components/photos';
 import data from '../service/data.json';
 import { ModalOverlay } from '../../styles/components/Modal';
 
 const Photos = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isImageUrl, setIsImageUrl] = useState('');
+  const imgRef = useRef();
 
-  // overlay 클릭 시 모달창 숨기기
-  const hanldeModal = e => {
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.cssText = `
+      position: fixed;
+      top: -${window.scrollY}px;
+      overflow-y:scroll;
+      width:100%;
+    `;
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+    }
+  }, [isModalOpen]);
+
+  // overlay 클릭 시 모달창 닫기
+  const hanldeModal = () => {
     setIsModalOpen(false);
   };
 
-  // 좌클릭 이벤트 발생시 모달창 보이기
-  const handleOnClick = e => {
+  // 좌클릭 이벤트 발생시 모달창 열기
+  const handleOnClick = src => {
     if (isModalOpen) {
       return;
     }
+    setSelectedImage(src);
     setIsModalOpen(true);
-    const url = e.target.src;
-    setIsImageUrl(url);
   };
 
   //   우클릭 이벤트가 발생했을때, 우클릭 이벤트 방지
@@ -32,50 +47,50 @@ const Photos = () => {
     <Photograpy>
       <PhotoContent>
         {data.archivePictures[5].main.map(photo => (
-          <PhotoList onClick={handleOnClick} key={photo.key} id={photo.key}>
+          <PhotoList onClick={() => handleOnClick(photo.imgUrl)} key={photo.key} id={photo.key}>
             <div>
-              <img onClick={handleOnClick} onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
+              <img onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
             </div>
           </PhotoList>
         ))}
         {data.archivePictures[4].project.map(photo => (
-          <PhotoList onClick={handleOnClick} key={photo.key} id={photo.key}>
+          <PhotoList onClick={() => handleOnClick(photo.imgUrl)} key={photo.key} id={photo.key}>
             <div>
-              <img onClick={handleOnClick} onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
+              <img onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
             </div>
           </PhotoList>
         ))}
         {data.archivePictures[3].travel.map(photo => (
-          <PhotoList onClick={handleOnClick} key={photo.key} id={photo.key}>
+          <PhotoList onClick={() => handleOnClick(photo.imgUrl)} key={photo.key} id={photo.key}>
             <div>
-              <img onClick={handleOnClick} onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
+              <img onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
             </div>
           </PhotoList>
         ))}
         {data.archivePictures[2].life.map(photo => (
-          <PhotoList onClick={handleOnClick} key={photo.key} id={photo.key}>
+          <PhotoList onClick={() => handleOnClick(photo.imgUrl)} key={photo.key} id={photo.key}>
             <div>
-              <img onClick={handleOnClick} onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
+              <img onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
             </div>
           </PhotoList>
         ))}
         {data.archivePictures[1].landscape.map(photo => (
-          <PhotoList onClick={handleOnClick} key={photo.key} id={photo.key}>
+          <PhotoList onClick={() => handleOnClick(photo.imgUrl)} key={photo.key} id={photo.key}>
             <div>
-              <img onClick={handleOnClick} onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
+              <img onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
             </div>
           </PhotoList>
         ))}
         {data.archivePictures[0].spaces.map(photo => (
-          <PhotoList onClick={handleOnClick} key={photo.key} id={photo.key}>
+          <PhotoList onClick={() => handleOnClick(photo.imgUrl)} key={photo.key} id={photo.key}>
             <div>
-              <img onClick={handleOnClick} onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
+              <img onContextMenu={handleRightClick} src={photo.imgUrl} alt={photo.alt} />
             </div>
           </PhotoList>
         ))}
       </PhotoContent>
-      <ModalOverlay title="Click anywhere to click" open={isModalOpen} onClick={hanldeModal}>
-        <img src={isImageUrl} alt="모달 이미지" />
+      <ModalOverlay title="아무 곳이나 클릭하여 닫기" open={isModalOpen} onClick={hanldeModal}>
+        <img ref={imgRef} src={selectedImage} alt="모달 이미지" />
       </ModalOverlay>
     </Photograpy>
   );
