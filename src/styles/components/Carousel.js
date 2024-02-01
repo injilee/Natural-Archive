@@ -90,7 +90,7 @@ export const NextBtn = styled.button`
     color: white;
     padding: 5px;
     opacity: 0.5;
-    visibility: ${({ index }) => (index === 5 ? 'hidden' : 'visibility')};
+    visibility: ${({ index, length }) => (index === length - 1 ? 'hidden' : 'visibility')};
     border-radius: 15px;
     background-color: white;
     z-index: 10;

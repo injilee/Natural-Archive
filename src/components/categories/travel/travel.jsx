@@ -12,6 +12,7 @@ import data from '../../service/data.json';
 import TopBtn from '../../topBtn/topBtn';
 
 const Travel = props => {
+  const arrayLength = data.archivePictures[3].travel.length;
   const carousel = createRef();
   const [index, setIndex] = useState(0);
 
@@ -21,7 +22,7 @@ const Travel = props => {
   };
 
   const nextSlider = () => {
-    if (index === 5) return;
+    if (index === arrayLength) return;
     setIndex(index + 1);
   };
 
@@ -64,7 +65,7 @@ const Travel = props => {
         <PrevBtn type="button" className="prev" onClick={prevSlider} index={index}>
           <GrPrevious />
         </PrevBtn>
-        <NextBtn type="button" className="next" onClick={nextSlider} index={index}>
+        <NextBtn type="button" className="next" onClick={nextSlider} index={index} length={arrayLength}>
           <GrNext />
         </NextBtn>
       </CarouselWrap>
