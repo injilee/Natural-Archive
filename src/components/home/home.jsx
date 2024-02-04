@@ -20,10 +20,6 @@ const Home = () => {
   );
 
   //   클릭 이벤트가 발생했을때, 우클릭 이벤트 방지
-  const handleLeftClick = e => {
-    console.log(e);
-  };
-
   const handleRightClick = e => {
     e.preventDefault();
     alert('이미지의 우클릭은 방지됩니다.');
@@ -60,7 +56,6 @@ const Home = () => {
       </MainImg>
       <SideImage>
         <img
-          onClick={handleLeftClick}
           onContextMenu={handleRightClick}
           src={listHover ? `./images/${listHover}.jpg` : './images/cock.jpg'}
           alt={listHover ? listHover : '닭'}
